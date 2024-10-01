@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: 'IBM Plex Sans', sans-serif; /* Set IBM Plex Sans as the main font */
+    color: white; /* Set text color to white */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+
+.text-paragraph {
+    padding: 0 30px; /* 20px padding on the left and right */
+    color: white; /* Set text color to white (optional) */
+    font-size: 14px; /* Set font size (you can adjust this as needed) */
+    line-height: 1.6; /* Adjust line height for readability */
+}
+
+.header-text {
+    color: white; /* Set text color to white */
+    text-align: center; /* Center align the text */
+    font-size: 16px; /* Set font size */
+    margin-bottom: 20px; /* Add more space below the header */
+    font-family: 'IBM Plex Sans', sans-serif; /* Ensure it uses the same font */
+    font-weight: 500; /* Use the medium variant */
+    text-transform: uppercase; /* Make the text all caps */
+    letter-spacing: 0.23em; /* Set letter spacing (230) */
+    width: 80%; /* 80% of the logo's width */
+    max-width: 300px; /* Maintains proper scaling on smaller screens */
+    margin-left: auto; /* Center the header text */
+    margin-right: auto; /* Center the header text */
+
+}
+
+
+.background-image {
+    background: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, black 100%), 
+        url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60vh; /* Ensures it covers the full height */
+    display: flex;
+    justify-content: center; /* Horizontally centers the content */
+    align-items: flex-start; /* Aligns content towards the top */
+    padding-top: 50px; /* Adjust the top padding as needed */
+}
+
+/* Content inside the background (logo and tagline) */
+.content {
+    text-align: center;
+    width: 100%; /* Ensures content is responsive */
+}
+
+/* Logo */
+.logo {
+    width: 50vw; /* 50% of the viewport width on larger screens */
+    max-width: 500px; /* Sets a max width for the logo */
+    height: auto; /* Keeps aspect ratio */
+    display: block; /* Ensures logo is treated as a block element */
+    margin: 0 auto; /* Centers the logo horizontally */
+    filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.8)); /* Add a drop shadow effect */
+}
+
+/* Tagline */
+.tagline {
+    width: 80%; /* 80% of the logo's width */
+    max-width: 300px; /* Maintains proper scaling on smaller screens */
+    padding-top: 30px; /* Adds spacing below the logo */
+    display: block; /* Ensures tagline is treated as a block element */
+    margin: 0 auto; /* Centers the tagline horizontally */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .logo {
+        width: 50vw; /* 50% of the viewport width on tablets */
+        max-width: none;
+    }
+
+    .tagline {
+        width: 60%; /* 60% of the logo width still applies */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 90vw; /* 90% of the viewport width on mobile */
+    }
+
+    .tagline {
+        width: 60%; /* Stays at 80% of the logo */
+    }
+}
+
+/* CSS to control iframe width responsively */
+
+.iframe-container {
+    margin: 20px auto; /* Center the iframe container */
+    max-width: 600px; /* Max width for the iframe container */
+    width: 90%; /* Full width on mobile */
+    border: 1.5px solid white; /* Add border around the iframe container */
+    border-radius: 20px; /* Curved corners */
+    padding: 20px; /* Padding inside the container */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    background-color: black; /* Solid black background */
+}
+
+iframe[title="Embed Player"] {
+    max-width: 600px; /* Set a maximum width for larger screens */
+    width: 100%; /* Ensure it remains responsive */
+    height: 412px; /* Keep the height as per your embedded iframe */
+    margin: 0 auto; /* Center the iframe horizontally */
+    display: block; /* Ensure it's treated as a block element */
+    border: 0px; /* Add a 3px white border */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    iframe[title="Embed Player"] {
+        width: 90%; /* Full width on tablets and mobile */
+    }
+}
+
+
+.podlinks {
+    padding: 30px 0; /* 40px padding above and below */
+    text-align: center; /* Center align the content */
+    border: 1.5px solid white; /* White border */
+    border-radius: 20px; /* Curved corners */
+    max-width: 600px; /* Set maximum width for desktop */
+    width: 90%; /* Set width to 90% on mobile */
+    margin: 40px auto; /* Add 20px margin on top and bottom, auto for left and right */
+    background-color: black; /* Solid black background */
+}
+
+
+.social-icons {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center align the icons */
+    gap: 20px; /* Space between icons */
+}
+
+.social-icons a {
+    color: white; /* Set icon color */
+    font-size: 36px; /* Set icon size */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.social-icons a:hover {
+    color: #ff8c00; /* Change color on hover */
+}
+
+.bottom-text {
+    text-align: center; /* Center the text */
+    font-size: 12px; /* Font size for the footer text */
+    font-family: 'IBM Plex Sans', sans-serif; /* Ensure it uses the same font */
+    font-weight: 500; /* Medium weight */
+    text-transform: uppercase; /* All caps */
+    letter-spacing: 0.23em; /* Letter spacing */
+    padding: 20px 0; /* Add padding to top and bottom */
+    margin: 20px 0; /* Space above */
+    color: white; /* Text color */
+    width: 80%; /* Same width as the tagline */
+    max-width: 600px; /* Maintain max width */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+}
+
+a {
+    color: white; /* Set link color to white */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+a:hover {
+    color: #ff8c00; /* Change link color on hover */
+}
